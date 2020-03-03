@@ -1,7 +1,7 @@
 package com.yy.framework.web;
 
-import com.eversec.framework.core.exception.BusinessException;
-import com.eversec.framework.core.reponse.Response;
+import com.yy.framework.core.exception.BusinessException;
+import com.yy.framework.core.reponse.Response;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

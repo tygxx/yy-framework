@@ -1,8 +1,8 @@
 package com.yy.framework.web.swagger;
 
-import com.eversec.framework.web.swagger.vo.ApiDocument;
-import com.eversec.framework.web.swagger.vo.ApiOperation;
-import com.eversec.framework.web.swagger.vo.ApiTag;
+import com.yy.framework.web.swagger.vo.ApiDocument;
+import com.yy.framework.web.swagger.vo.ApiOperation;
+import com.yy.framework.web.swagger.vo.ApiTag;
 import io.swagger.models.Operation;
 import io.swagger.models.Path;
 import io.swagger.models.Swagger;

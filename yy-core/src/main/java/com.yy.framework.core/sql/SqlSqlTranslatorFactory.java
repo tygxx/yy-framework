@@ -1,7 +1,8 @@
 package com.yy.framework.core.sql;
 
-import com.eversec.framework.core.sql.vo.SqlDialect;
-import com.eversec.framework.core.sql.xml.Xml2Sql;
+
+import com.yy.framework.core.sql.vo.SqlDialect;
+import com.yy.framework.core.sql.xml.Xml2Sql;
 
 /**
  * 类名称: SqlReplaceFactory<br>

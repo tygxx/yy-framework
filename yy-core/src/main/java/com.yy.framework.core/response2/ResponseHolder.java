@@ -1,9 +1,8 @@
 package com.yy.framework.core.response2;
 
+import com.yy.framework.core.exception.BusinessException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.eversec.framework.core.exception.BusinessException;
 
 /**
  * 类名称: ResponseHolder<br>

@@ -1,23 +1,18 @@
 package com.yy.framework.core.sql.xml;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Logger;
-
+import com.yy.framework.core.sql.vo.SqlCondition;
+import com.yy.framework.core.sql.vo.SqlScript;
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
-import com.eversec.framework.core.sql.vo.SqlCondition;
-import com.eversec.framework.core.sql.vo.SqlScript;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.net.URL;
+import java.util.*;
+import java.util.logging.Logger;
 
 public class Xml2Sql {
 	

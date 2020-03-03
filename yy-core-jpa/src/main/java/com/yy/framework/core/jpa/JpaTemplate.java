@@ -1,9 +1,9 @@
 package com.yy.framework.core.jpa;
 
-import com.eversec.framework.core.annotation.DateFormat;
-import com.eversec.framework.core.data.QueryCondition;
-import com.eversec.framework.core.data.QueryResult;
-import com.eversec.framework.core.exception.BusinessException;
+import com.yy.framework.core.annotation.DateFormat;
+import com.yy.framework.core.data.QueryCondition;
+import com.yy.framework.core.data.QueryResult;
+import com.yy.framework.core.exception.BusinessException;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;

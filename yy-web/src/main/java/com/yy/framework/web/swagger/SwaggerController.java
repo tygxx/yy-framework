@@ -1,9 +1,9 @@
 package com.yy.framework.web.swagger;
 
-import com.eversec.framework.core.response2.ResponseExecutable;
-import com.eversec.framework.core.response2.ResponseHolder;
-import com.eversec.framework.core.response2.RestResponse;
-import com.eversec.framework.web.swagger.vo.ApiDocument;
+import com.yy.framework.core.response2.ResponseExecutable;
+import com.yy.framework.core.response2.ResponseHolder;
+import com.yy.framework.core.response2.RestResponse;
+import com.yy.framework.web.swagger.vo.ApiDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

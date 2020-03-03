@@ -1,5 +1,10 @@
 package com.yy.framework.core.sql;
 
+import com.yy.framework.core.sql.vo.*;
+import com.yy.framework.core.sql.xml.Xml2Sql;
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang.StringUtils;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,15 +14,6 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.beanutils.BeanUtils;
-import org.apache.commons.lang.StringUtils;
-
-import com.eversec.framework.core.sql.vo.DataType;
-import com.eversec.framework.core.sql.vo.Placeholder;
-import com.eversec.framework.core.sql.vo.SqlCondition;
-import com.eversec.framework.core.sql.vo.SqlScript;
-import com.eversec.framework.core.sql.vo.SqlType;
-import com.eversec.framework.core.sql.xml.Xml2Sql;
 
 /**
  * 类名称: SqlESReplace<br>

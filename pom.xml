@@ -8,6 +8,7 @@
     <artifactId>yy-framework</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>yy-framework</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,6 +38,9 @@
         <swagger.annotations.version>1.5.13</swagger.annotations.version>
 
         <servlet.version>2.5</servlet.version>
+
+<!--        解决jdk1.8打包报错-->
+        <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
 
     <modules>
@@ -161,8 +165,22 @@
         </dependencies>
     </dependencyManagement>
 
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>disable-javadoc-doclint</id>-->
+<!--            <activation>-->
+<!--                <jdk>[1.8,)</jdk>-->
+<!--            </activation>-->
+<!--            <properties>-->
+<!--                <javadoc.opts>-Xdoclint:none</javadoc.opts>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
     <build>
         <plugins>
+<!--            把项目通过maven生产源码包和文档包并发布到自己的私服上，
+                有两个maven插件可以做到这些工作，一个是maven-source-plugin，另一个是maven-javadoc-plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -185,6 +203,10 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+<!--                        解决jdk1.8打包报错-->
+<!--                        <configuration>-->
+<!--                            <additionalparam>-Xdoclint:none</additionalparam>-->
+<!--                        </configuration>-->
                     </execution>
                 </executions>
             </plugin>
@@ -207,47 +229,63 @@
         </plugins>
     </build>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven-nexus</id>
-            <name>maven-nexus</name>
-            <url>http://182.92.98.133:8081/nexus/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <repositories>
-        <repository>
-            <id>alimaven</id>
-            <name>aliyun maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>ignore</checksumPolicy>
-            </snapshots>
-        </repository>
+<!--    mvn deploy时把包推到的私服地址-->
+    <distributionManagement>
         <repository>
             <id>nexus</id>
-            <name>maven-nexus</name>
-            <url>http://182.92.98.133:8081/nexus/repository/maven-public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <name>releases</name>
+<!--            要去自己的私服查看url-->
+            <url>http://182.92.98.133:8081/repository/maven-releases/</url>
         </repository>
-    </repositories>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>snapshots</name>
+            <!--            要去自己的私服查看url-->
+            <url>http://182.92.98.133:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+<!--    <pluginRepositories>-->
+<!--        <pluginRepository>-->
+<!--            <id>maven-nexus</id>-->
+<!--            <name>maven-nexus</name>-->
+<!--            <url>http://182.92.98.133:8081/nexus/repository/maven-public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--        </pluginRepository>-->
+<!--    </pluginRepositories>-->
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>alimaven</id>-->
+<!--            <name>aliyun maven</name>-->
+<!--            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--                <updatePolicy>always</updatePolicy>-->
+<!--                <checksumPolicy>ignore</checksumPolicy>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--                <updatePolicy>always</updatePolicy>-->
+<!--                <checksumPolicy>ignore</checksumPolicy>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>nexus</id>-->
+<!--            <name>maven-nexus</name>-->
+<!--            <url>http://182.92.98.133:8081/nexus/repository/maven-public</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
 </project>
