@@ -7,10 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yy-core" />
-        <module name="yy-web" />
-        <module name="yy-framework" />
         <module name="yy-commons" />
         <module name="yy-core-jpa" />
+        <module name="yy-web" />
         <module name="yy-commons-extend" />
       </profile>
     </annotationProcessing>
