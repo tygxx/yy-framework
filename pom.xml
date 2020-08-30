@@ -6,7 +6,9 @@
 
     <groupId>com.yy.framework</groupId>
     <artifactId>yy-framework</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+<!--    这个版本执行mvn deploy上传到私服时，所有的包会怎么带上时间戳-->
+<!--    <version>1.0.0-SNAPSHOT</version>-->
+    <version>1.0.0-RELEASE</version>
     <packaging>pom</packaging>
     <name>yy-framework</name>
 
@@ -244,48 +246,5 @@
             <url>http://182.92.98.133:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
-<!--    <pluginRepositories>-->
-<!--        <pluginRepository>-->
-<!--            <id>maven-nexus</id>-->
-<!--            <name>maven-nexus</name>-->
-<!--            <url>http://182.92.98.133:8081/nexus/repository/maven-public/</url>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--            </snapshots>-->
-<!--        </pluginRepository>-->
-<!--    </pluginRepositories>-->
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>alimaven</id>-->
-<!--            <name>aliyun maven</name>-->
-<!--            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--                <updatePolicy>always</updatePolicy>-->
-<!--                <checksumPolicy>ignore</checksumPolicy>-->
-<!--            </releases>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--                <updatePolicy>always</updatePolicy>-->
-<!--                <checksumPolicy>ignore</checksumPolicy>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--        <repository>-->
-<!--            <id>nexus</id>-->
-<!--            <name>maven-nexus</name>-->
-<!--            <url>http://182.92.98.133:8081/nexus/repository/maven-public</url>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--    </repositories>-->
 
 </project>
